@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/Pharmacy.Api/Pharmacy.Api.csproj" />
+  <Project Path="src/Pharmacy.Client/Pharmacy.Client.csproj" />
+  <Project Path="tests/Pharmacy.Tests/Pharmacy.Tests.csproj" />
+</Solution>
