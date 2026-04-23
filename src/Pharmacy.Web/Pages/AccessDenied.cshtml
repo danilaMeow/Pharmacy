@@ -1,0 +1,46 @@
+﻿@page
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Доступ запрещен</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .box {
+            text-align: center;
+            border: 1px solid #ef4444;
+            padding: 40px;
+            border-radius: 12px;
+        }
+
+        .btn {
+            color: #38bdf8;
+            text-decoration: none;
+            border: 1px solid #38bdf8;
+            padding: 10px 20px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1 style="color:#ef4444">⚠️ Ошибка доступа</h1>
+        <p>У вас нет прав администратора для просмотра этого раздела.</p>
+        <a href="/Index" class="btn">Вернуться в магазин</a>
+    </div>
+</body>
+</html>
