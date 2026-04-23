@@ -8,7 +8,6 @@ class Program
 
     static async Task Main()
     {
-        // Подписка
         ApiLogHandler consoleLog = msg => Console.WriteLine($"[LOG]: {msg}");
         ApiLogHandler fileLog = msg => File.AppendAllText("api.log", $"{DateTime.Now}: {msg}\n");
 
@@ -16,9 +15,7 @@ class Program
         OnLog += fileLog;
 
         OnLog?.Invoke("Запрос списка лекарств...");
-        // Тут логика HttpClient...
 
-        // Отписка (требование лабы)
         OnLog -= fileLog;
         OnLog?.Invoke("Файловое логирование отключено.");
     }
