@@ -1,0 +1,76 @@
+@page
+@model Pharmacy.Web.Pages.LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход в систему</title>
+    <style>
+        body {
+            background: #0f172a;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-card {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.5);
+            width: 300px;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.5rem;
+            margin: 0.5rem 0;
+            border-radius: 0.25rem;
+            border: 1px solid #334155;
+            background: #0f172a;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            background: #38bdf8;
+            border: none;
+            border-radius: 0.25rem;
+            color: #0f172a;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .error {
+            color: #fb7185;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card">
+        <h2 style="text-align: center;">ВитАминка</h2>
+        <form method="post">
+            <input type="text" asp-for="UserName" placeholder="Логин" required />
+            <input type="password" asp-for="Password" placeholder="Пароль" required />
+            <button type="submit">Войти</button>
+        </form>
+
+        @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+        {
+        <div class="error">@Model.ErrorMessage</div>
+        }
+    </div>
+</body>
+</html>
